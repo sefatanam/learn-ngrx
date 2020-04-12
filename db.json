@@ -1,0 +1,16 @@
+{
+    "customers":[
+        {
+            "id":1,
+            "name":"Sefat Anam",
+            "address": "Dhaka",
+            "phone":"23443423453"
+        },
+        {
+            "id":2,
+            "name":"Refat Anam",
+            "address": "Gazipur",
+            "phone":"093425346"
+        }
+    ]
+}
