@@ -7,10 +7,9 @@ const appRoutes: Routes = [
   { path: "", component: HomeComponent },
   {
     path: "customers",
-    loadChildren: "..app/customers/customers.module#CustomersModule"
+    loadChildren: "../app/customers/customers.module#CustomersModule"
   }
 ];
-
 
 
 @NgModule({

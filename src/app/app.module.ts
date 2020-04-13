@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing.module';
+import { CustomersModule } from './customers/customers.module';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NavbarComponent],
@@ -15,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserAnimationsModule,
     StoreModule.forRoot({}),
     AppRoutingModule,
+    CustomersModule
   ],
   providers: [],
   bootstrap: [AppComponent],
