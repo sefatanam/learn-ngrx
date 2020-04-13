@@ -12,19 +12,21 @@ export class CustomerAddComponent implements OnInit {
 
   constructor( private fb: FormBuilder) { }
 
-  ngOnInit(): void {
-  }
-
-  
-
-  private validators(){
+  ngOnInit(): void { 
     this.customerForm = this.fb.group({
       name: ["", Validators.required],
       phone: ["", Validators.required],
       address: ["", Validators.required],
       membership: ["", Validators.required]
-    });
+    })
+
+    this.customerForm.valueChanges.subscribe(console.log);
   }
+
+  
+
+ 
+  
 
   createCustomer() {
     const newCustomer: Customer = {
