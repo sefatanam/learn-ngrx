@@ -15,6 +15,9 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import { MatCheckboxModule} from '@angular/material/checkbox';
 
+import {StoreDevtoolsModule } from '@ngrx/store-devtools';
+
+
 @NgModule({
   declarations: [AppComponent, HomeComponent, NavbarComponent],
   imports: [
@@ -22,9 +25,11 @@ import { MatCheckboxModule} from '@angular/material/checkbox';
     BrowserAnimationsModule,
     StoreModule.forRoot({}),
     AppRoutingModule,
-    CustomersModule,FormsModule,ReactiveFormsModule,MatInputModule,MatButtonModule,MatSelectModule,MatCheckboxModule
+    CustomersModule,FormsModule,ReactiveFormsModule,MatInputModule,MatButtonModule,MatSelectModule,MatCheckboxModule,
+    StoreDevtoolsModule.instrument()
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
+
 export class AppModule {}
