@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Customer } from "../customer.model";
-import { Observable } from "rxjs";
+import { Customer } from '../customer.model';
+import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { type } from 'os';
 
 @Component({
   selector: 'app-customer-list',
@@ -13,18 +12,18 @@ export class CustomerListComponent implements OnInit {
 
   customers;
   customers$: Observable<Customer[]>;
-  error$: Observable<String>;
-  constructor( private store : Store<any>) { }
+  error$: Observable<string>;
+  constructor( private store: Store<any>) { }
 
   ngOnInit(): void {
     // this.customers$ = this.store.pipe(select(fromCustomer.getCustomers));
     // this.error$ = this.store.pipe(select(fromCustomer.getError));
-    this.store.dispatch({type: 'LOAD_CUSTOMERS'})
-    this.store.subscribe( state=> (this.customers = state.customers.customers))
+    this.store.dispatch({type: 'LOAD_CUSTOMERS'});
+    this.store.subscribe( state => (this.customers = state.customers.customers));
   }
 
 
-  
+
   deleteCustomer(customer: Customer) {
     // if (confirm("Are You Sure You want to Delete the User?")) {
     //   this.store.dispatch(new customerActions.DeleteCustomer(customer.id));
