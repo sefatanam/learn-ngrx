@@ -14,7 +14,7 @@
       <td colspan="5" class="alert alert-danger" *ngIf="error$ | async as error">{{error}}</td>
     </tr>
     <tr>
-      <tr *ngFor="let customer of customers">
+      <!-- <tr *ngFor="let customer of customers">
         <th scope="row">{{customer.name}}</th>
         <td>{{customer.phone}}</td>
         <td>{{customer.address}}</td>
@@ -24,9 +24,9 @@
           <br>
           <a (click)=deleteCustomer(customer)>delete</a>
         </th>
-      </tr>
+      </tr> -->
 
-    <!-- <tr *ngFor="let customer of (customers$ |async)">
+    <tr *ngFor="let customer of (customers$ |async)">
       <th scope="row">{{customer.name}}</th>
       <td>{{customer.phone}}</td>
       <td>{{customer.address}}</td>
@@ -36,6 +36,6 @@
         <br>
         <a (click)=deleteCustomer(customer)>delete</a>
       </th>
-    </tr> -->
+    </tr>
   </tbody>
 </table>

@@ -16,6 +16,8 @@ import { MatCheckboxModule} from '@angular/material/checkbox';
 // Impliment NGRX
 import { StoreModule } from '@ngrx/store';
 import { customerReducer } from './state/customer.reducer';
+import { EffectsModule, Actions } from '@ngrx/effects';
+import { CustomerEffect } from './state/customer.effects';
 
 const customerRoutes: Routes =[{path: '', component: CustomerComponent}];
 
@@ -27,7 +29,8 @@ const customerRoutes: Routes =[{path: '', component: CustomerComponent}];
     CommonModule,
     RouterModule.forChild(customerRoutes),
     FormsModule,ReactiveFormsModule,MatInputModule,MatButtonModule,MatSelectModule,MatCheckboxModule,
-    StoreModule.forFeature("customers",customerReducer)
+    StoreModule.forFeature("customers",customerReducer),
+    EffectsModule.forFeature([CustomerEffect])
   ]
 })
 export class CustomersModule { }
