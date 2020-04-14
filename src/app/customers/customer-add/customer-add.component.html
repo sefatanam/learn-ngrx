@@ -1,5 +1,6 @@
-<h3>Add Customer</h3>
-
+ <br>
+ <h3>Add Customer</h3>
+<!-- 
 <form class="form-inline mb-4">
   <form [formGroup]="customerForm" (submit)="createCustomer()" class="form-inline mb-4">
     <label class="sr-only" for="Name">Name</label>
@@ -32,4 +33,47 @@
   <div class="container">
 
     Value : {{customerForm.value | json}}
+  </div> -->
+
+
+  <div class="example-container form-inline mb-4" fxFlex="row" fxFlexLayout="space-between">
+    <form [formGroup]="customerForm" (submit)="createCustomer()">
+
+      <mat-form-field appearance="outline">
+        <input matInput formControlName="name" placeholder="Name" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone" placeholder="Phone">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" >
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="address" placeholder="Address">
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+          <mat-label>Membership</mat-label>
+        <mat-select required formControlName="membership">
+          <mat-option>-- None --</mat-option>
+          <mat-option value="Basic">Basic</mat-option>
+          <mat-option value="Pro">Pro</mat-option>
+          <mat-option value="Premium">Premium</mat-option>
+        </mat-select>
+
+        <!-- <mat-label><mat-icon>favorite</mat-icon> <b> Fancy</b> <i> label</i></mat-label> -->
+      </mat-form-field>
+
+      <div>
+        <button mat-raised-button color="primary" class="justify-content-end btn btn-lg" type="submit"> Create </button>
+        <!-- Value : {{customerForm.value | json}} -->
+      </div>
+    </form>
   </div>
+
+  <div class="container">
+
+   
+  </div> 
+  

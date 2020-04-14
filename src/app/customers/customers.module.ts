@@ -17,6 +17,12 @@ import { StoreModule } from '@ngrx/store';
 import { customerReducer } from './state/customer.reducer';
 import { EffectsModule, Actions } from '@ngrx/effects';
 import { CustomerEffect } from './state/customer.effects';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatTableModule} from '@angular/material/table';
+
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatIconModule} from '@angular/material/icon';
+
 
 const customerRoutes: Routes =[{path: '', component: CustomerComponent}];
 
@@ -29,7 +35,7 @@ const customerRoutes: Routes =[{path: '', component: CustomerComponent}];
     RouterModule.forChild(customerRoutes),
     FormsModule,ReactiveFormsModule,MatInputModule,MatButtonModule,MatSelectModule,MatCheckboxModule,
     StoreModule.forFeature("customers",customerReducer),
-    EffectsModule.forFeature([CustomerEffect])
+    EffectsModule.forFeature([CustomerEffect]),MatFormFieldModule,MatTableModule,MatPaginatorModule,MatIconModule
   ]
 })
 export class CustomersModule { }
