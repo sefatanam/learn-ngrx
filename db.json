@@ -5,14 +5,7 @@
       "name": "Sefat Anam",
       "address": "Dhaka",
       "phone": "23443423453",
-      "membership":"Basic"
-    },
-    {
-      "name": "Lad21",
-      "phone": "12321",
-      "address": "Dhakas",
-      "membership": "Pro",
-      "id": 2
+      "membership": "Basic"
     },
     {
       "name": "A",
@@ -20,6 +13,13 @@
       "address": "B",
       "membership": "Premium",
       "id": 3
+    },
+    {
+      "name": "Sefat",
+      "phone": "45",
+      "address": "456",
+      "membership": "Premium",
+      "id": 4
     }
   ]
 }

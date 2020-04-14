@@ -4,17 +4,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
-  { path: "", component: HomeComponent },
+  { path: '', component: HomeComponent },
   {
-    path: "customers",
-    loadChildren: "../app/customers/customers.module#CustomersModule"
+    path: 'customers',
+    loadChildren: '../app/customers/customers.module#CustomersModule'
   }
 ];
 
 
 @NgModule({
   declarations: [],
-  imports: [ 
+  imports: [
     CommonModule,
     RouterModule.forRoot(appRoutes)
   ],

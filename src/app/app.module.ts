@@ -23,7 +23,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { StoreRouterConnectingModule, routerReducer, RouterStateSerializer } from '@ngrx/router-store';
 import { CustomSerializer } from './shared/utils';
 
-import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
@@ -38,12 +37,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     }),
     StoreRouterConnectingModule.forRoot({stateKey: 'router'}),
     AppRoutingModule,
-    CustomersModule,FormsModule,ReactiveFormsModule,MatInputModule,MatButtonModule,MatSelectModule,MatCheckboxModule,
+    CustomersModule, FormsModule, ReactiveFormsModule, MatInputModule, MatButtonModule, MatSelectModule, MatCheckboxModule,
     StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([]),
     HttpClientModule,
     MatToolbarModule,
-    FlexLayoutModule,
     MatSidenavModule,
     MatFormFieldModule
 

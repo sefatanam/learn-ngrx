@@ -4,4 +4,4 @@ export interface Customer {
     phone: string;
     address: string;
     membership: string;
-  }
+}

@@ -24,7 +24,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
 
 
-const customerRoutes: Routes =[{path: '', component: CustomerComponent}];
+const customerRoutes: Routes = [{path: '', component: CustomerComponent}];
 
 
 
@@ -33,9 +33,9 @@ const customerRoutes: Routes =[{path: '', component: CustomerComponent}];
   imports: [
     CommonModule,
     RouterModule.forChild(customerRoutes),
-    FormsModule,ReactiveFormsModule,MatInputModule,MatButtonModule,MatSelectModule,MatCheckboxModule,
-    StoreModule.forFeature("customers",customerReducer),
-    EffectsModule.forFeature([CustomerEffect]),MatFormFieldModule,MatTableModule,MatPaginatorModule,MatIconModule
+    FormsModule, ReactiveFormsModule, MatInputModule, MatButtonModule, MatSelectModule, MatCheckboxModule,
+    StoreModule.forFeature('customers', customerReducer),
+    EffectsModule.forFeature([CustomerEffect]), MatFormFieldModule, MatTableModule, MatPaginatorModule, MatIconModule
   ]
 })
 export class CustomersModule { }
