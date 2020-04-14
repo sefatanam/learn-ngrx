@@ -19,20 +19,28 @@ import {StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
 
+import { StoreRouterConnectingModule, routerReducer, RouterStateSerializer } from '@ngrx/router-store';
+import { CustomSerializer } from './shared/utils';
+
+
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NavbarComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot({}),
+    StoreModule.forRoot({
+      router: routerReducer
+    }),
+    StoreRouterConnectingModule.forRoot({stateKey: 'router'}),
     AppRoutingModule,
     CustomersModule,FormsModule,ReactiveFormsModule,MatInputModule,MatButtonModule,MatSelectModule,MatCheckboxModule,
     StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([]),
-    HttpClientModule
+    HttpClientModule,
+
   ],
-  providers: [],
+  providers: [{provide: RouterStateSerializer, useClass: CustomSerializer}],
   bootstrap: [AppComponent],
 })
 
